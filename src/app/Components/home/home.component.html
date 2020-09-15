@@ -1,0 +1,94 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="row">
+    <div class="col-xs-12 ">
+        <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true"><i class="fa fa-paper-plane"></i>Flights</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                    aria-controls="nav-profile" aria-selected="false"><i class="fa fa-hotel"></i>Hotels</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                    aria-controls="nav-contact" aria-selected="false">Flights & Hotels <span class="badge badge-pill badge-success">Save</span>
+                </a>
+                <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+                    aria-controls="nav-about" aria-selected="false"><i class="fa fa-book"></i>Holidays</a>
+            </div>
+        </nav>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h3>BOOK YOUR FLIGHTS</h3>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="dommestic" [(ngModel)]="booking.flightType" name="flightType" id="option2" > Dommestic
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="international" [(ngModel)]="booking.flightType" name="flightType" id="option3"> International
+                            </label>
+                          </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>From</label>
+                                <input type="text" class="form-control" [(ngModel)]="booking.from" name="from" id="from">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>To</label>
+                                <input type="text" class="form-control" [(ngModel)]="booking.to" name="to" id="to">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Departure</label>
+                                <input type="date" class="form-control" [(ngModel)]="booking.departure" name="departure" id="departure">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Return</label>
+                                <input type="date" class="form-control" [(ngModel)]="booking.return" name="return" id="return">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>To</label>
+                                <input type="number" class="form-control" [(ngModel)]="booking.noOfAdults" name="noOfAdults" id="noOfAdults">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <button type="submit" class="btn btn-outline-secondary" (click)="searchFlight()">Search Flights</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#">Advance Search</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <h3>Hotels</h3>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <h3>Flights & Hotels</h3>
+            </div>
+            <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                <h3>Holidays</h3>
+            </div>
+        </div>
+
+    </div>
+</div>

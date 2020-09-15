@@ -1,0 +1,21 @@
+.navbar-light {
+    background-color: lightblue !important;
+}
+
+.top-bar-info {
+    background-color: white;
+    opacity: .8;
+}
+
+.top-bar-info {
+    a {
+        font-size: 12px !important;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .justify-content-end {
+        float: left;
+    }
+}
