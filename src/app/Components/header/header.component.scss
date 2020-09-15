@@ -12,6 +12,9 @@
         font-size: 12px !important;
         color: black;
     }
+    .dropdown-menu {
+        z-index: 1 !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
